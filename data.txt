@@ -1,0 +1,3 @@
+Ishav 0001 CR 19 20000 3 
+Himanish 0002 Student 19 20000 1 
+Rakesh 0003 ME 40 16000 20 
