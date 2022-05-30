@@ -9,8 +9,8 @@
 using namespace std;
 
 char name[30];
-char id[5];
-char designation[10];
+char id[8];
+char designation[25];
 int age;
 int ctc;
 int experience; 			
@@ -39,7 +39,7 @@ class employee{
         void showDetails(void){
             system("cls");
             FILE *file;
-            char checkId[5];
+            char checkId[8];
             cout<<"\n\nEnter Employee ID: ";
             cin>>checkId;
             file= fopen("data.txt", "r");
@@ -64,6 +64,7 @@ class employee{
             char newDesignation[10];
             cout<<"\nEnter new designation: ";
             cin>>newDesignation;
+            cout<<"\nEnter new ctc: ";
             int newCtc;
             cin>>newCtc;
             FILE *file, *tempfile;
@@ -100,7 +101,7 @@ class employee{
             char ch;
             cout<<"\nEnter 'y' to save above information! \n";
             cin>>ch;
-            if(ch=='y'){
+            if(ch=='y' || ch=='Y'){
                 FILE  *file;
                 file= fopen("data.txt","a");
                 fprintf(file, "%s %s %s %d %d %d \n", name, id, designation, age, ctc, experience );
@@ -120,7 +121,7 @@ class employee{
             char ch;    
             cout<<"\n\n\n\n\nCONFIRMATION\nEnter 'y' To Confirm Deletion \n";
             cin>>ch;
-            if(ch=='y'){
+            if(ch=='y' || ch=='Y'){
                 FILE *file, *tempfile;
                 file= fopen("data.txt", "r");
                 tempfile= fopen("temp.txt", "w");
@@ -250,7 +251,7 @@ if(c==2){
             char ch;
             cout<<"\nEnter 'y' to save above information\n";
             cin>>ch;
-            if(ch=='y'){
+            if(ch=='y' || ch=='Y'){
                 FILE  *file;
                 file= fopen("data.txt","a");
                 fprintf(file, "%s %s %s %d %d %d \n", name, id, designation, age, ctc, experience );
